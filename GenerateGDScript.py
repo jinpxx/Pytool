@@ -204,7 +204,7 @@ def remove_macosx_and_files(project_path):
             except OSError as e:
                 print(f"Failed to delete folder {macosx_path}: {e}")
         
-        # 删除 .DS_Store 和 ._.DS_Store 文件
+        # 删除 .DS_Store 和 ._.DS_Store 文件 和 .aseprite
         for file in files:
             if file.endswith('.DS_Store') or file.endswith('._.DS_Store') or file.endswith('.aseprite'):
                 file_path = os.path.join(root, file)
@@ -241,7 +241,7 @@ button_delete = tk.Button(root, text="删除生成的脚本", command=start_dele
 button_delete.pack(pady=5)
 
 # 创建清理项目素材按钮
-button_delete = tk.Button(root, text="清理 MACOSX 和 DS_Store 文件", command=start_cleaning)
+button_delete = tk.Button(root, text="清理 MACOSX 、 DS_Store 、 asprite 文件", command=start_cleaning)
 button_delete.pack(pady=5)
 
 # 获取屏幕宽度和高度
