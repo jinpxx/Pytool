@@ -206,7 +206,7 @@ def remove_macosx_and_files(project_path):
         
         # 删除 .DS_Store 和 ._.DS_Store 文件
         for file in files:
-            if file.endswith('.DS_Store') or file.endswith('._.DS_Store'):
+            if file.endswith('.DS_Store') or file.endswith('._.DS_Store') or file.endswith('.aseprite'):
                 file_path = os.path.join(root, file)
                 try:
                     os.remove(file_path)
